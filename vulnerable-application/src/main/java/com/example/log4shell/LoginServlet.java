@@ -22,6 +22,8 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("<html><body>");
 
+        // System.setProperty("com.sun.jndi.ldap.object.trustURLCodebase", "true");
+        // logger.error("params:{}", "${jndi:ldap://127.0.0.1:1389/Log4jTest}");
         logger.error(req.getHeader("User-Agent")); // vulnerable code
         if (userName.equals("admin") && password.equals("password")) {
             out.println("Welcome Back Admin");

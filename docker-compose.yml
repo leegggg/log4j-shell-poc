@@ -5,7 +5,7 @@ services:
     container_name: app
     environment:
       - flag=b965b94f-5719-41a1-9eb6-257a59c168b4
-      - db_url=postgres://user:pass@host:port/db
+      - db_url=postgres://database_user:database_user_passwd@dbhost.example:dbport/db
     ports:
       - 39110:8080
     restart: always

