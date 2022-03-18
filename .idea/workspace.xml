@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91a22bc8-d7d8-4e04-805d-c505d17336b4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/vulnerable-application/log4shell.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/vulnerable-application/src/main/java/com/example/log4shell/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/vulnerable-application/src/main/java/com/example/log4shell/LoginServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
