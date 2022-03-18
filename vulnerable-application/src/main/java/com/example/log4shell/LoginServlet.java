@@ -15,7 +15,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        Logger logger = LogManager.getLogger(com.example.log4shell.log4j.class);  // vulnerable code
         String userName = req.getParameter("uname");
         String password = req.getParameter("password");
 
@@ -23,15 +23,12 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("<html><body>");
 
+        logger.error(req.getHeader("User-Agent"));  // vulnerable code
         if(userName.equals("admin") && password.equals("password")){
             out.println("Welcome Back Admin");
         }
         else{
-
-            // vulnerable code
-            Logger logger = LogManager.getLogger(com.example.log4shell.log4j.class);
-            logger.error(userName);
-
+            logger.error(userName);  // vulnerable code
             out.println("<code> the password you entered was invalid, <u> we will log your information </u> </code>");
         }
     }
