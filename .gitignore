@@ -2,3 +2,6 @@ jdk1.8.0_20/
 Exploit.*
 /bin
 /env
+*.log
+/doc
+/.idea

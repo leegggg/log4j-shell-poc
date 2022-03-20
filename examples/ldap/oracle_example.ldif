@@ -1,0 +1,81 @@
+version: 1
+# NOTE: you must edit this file before importing it and replace all
+# occurrences of the default suffix "dc=yourco,dc=com" with the suffix
+# that your LDAP server is configured for.
+# dn: dc=denver,dc=example,dc=com
+# objectclass: domain
+# objectclass: top
+# Add lines according to this scheme that correspond to your suffix
+# dc: dc=denver,dc=example,dc=com
+ 
+# dn: cn=users,dc=denver,dc=example,dc=com
+# objectClass: document
+# objectClass: subschema
+# objectClass: top
+# documentIdentifier: users
+# cn: users
+ 
+# dn: cn=groups,dc=denver,dc=example,dc=com
+# objectClass: document
+# objectClass: subschema
+# objectClass: top
+# documentIdentifier: groups
+# cn: groups
+ 
+dn: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+objectclass: inetOrgPerson
+uid: wpsadmin
+userpassword: wpsadmin
+sn: admin
+givenName: wps
+cn: wps admin
+ 
+# dn: uid=wasadmin,cn=users,dc=denver,dc=example,dc=com
+# objectclass: organizationalPerson
+# objectclass: person
+# objectclass: top
+# objectclass: inetOrgPerson
+# uid: wasadmin
+# userpassword: wasadmin
+# sn: admin
+# givenName: was
+# cn: was admin
+ 
+# dn: uid=wpsbind,cn=users,dc=denver,dc=example,dc=com
+# objectclass: top
+# objectclass: person
+# objectclass: organizationalPerson
+# objectclass: inetOrgPerson
+# uid: wpsbind
+# userpassword: wpsbind
+# sn: bind
+# givenName: wps
+# cn: wps bind
+ 
+# dn: cn=wpsadmins,cn=groups,dc=denver,dc=example,dc=com
+# objectclass: groupOfUniqueNames
+# objectclass: top
+# uniquemember: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+# cn: wpsadmins
+ 
+ 
+# dn: cn=wpsContentAdministrators,cn=groups,dc=denver,dc=example,dc=com
+# objectclass: groupOfUniqueNames
+# objectclass: top
+# uniquemember: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+# cn: wpsContentAdministrators
+ 
+# dn: cn=wpsDocReviewer,cn=groups,dc=denver,dc=example,dc=com
+# objectclass: groupOfUniqueNames
+# objectclass: top
+# uniquemember: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+# cn: wpsDocReviewer
+ 
+# dn: cn=wcmadmins,cn=groups,dc=denver,dc=example,dc=com
+# objectclass: groupOfUniqueNames
+# objectclass: top
+# uniquemember: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+# cn: wcmadmins

